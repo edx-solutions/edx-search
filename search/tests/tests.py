@@ -627,12 +627,10 @@ class MockSpecificSearchTests(TestCase):
         self.assertTrue(json_date_to_datetime(json_datetime), datetime(2015, 1, 31, 7, 30, 28, 65785))
 
 # Uncomment below in order to test against installed Elastic Search installation
-
-
-@override_settings(SEARCH_ENGINE="search.tests.tests.ForceRefreshElasticSearchEngine")
-class ElasticSearchTests(MockSearchTests):
-    """ Override that runs the same tests for ElasticSearchEngine instead of MockSearchEngine """
-    pass
+# @override_settings(SEARCH_ENGINE="search.tests.tests.ForceRefreshElasticSearchEngine")
+# class ElasticSearchTests(MockSearchTests):
+#     """ Override that runs the same tests for ElasticSearchEngine instead of MockSearchEngine """
+#     pass
 
 
 @override_settings(MOCK_SEARCH_BACKING_FILE="testfile.pkl")
